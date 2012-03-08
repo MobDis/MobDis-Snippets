@@ -13,6 +13,17 @@ Edit the snippet at the following places:
 
 (3) _**ID of the textbox object**_
 
+```javascript
+var yql = "http://query.yahooapis.com/v1/public/yql?q=",
+		request = "select * from html where url=",
+		urlRequest = "http://www.patschoolhouse.com/programmes/toddler/curriculum", // (1) URL of the scrapped site
+		xpath = "//div[@id=\"content-area\"]/div/div/div[@class=\"content\"]", // (2) xpath of the element you want to scrape
+		fullURL = yql + encodeURIComponent( request + '"'+urlRequest+'" and xpath=\''+ xpath+"'"),
+		nodeID = '#text-1', // (3) FILL IN ID of the textbox
+		pageID = '#'+$(nodeID).parent().parent(),
+		ele = $(pageID + ' ' + nodeID +'_content div');
+```
+
 ## Code Snippet
 
 
