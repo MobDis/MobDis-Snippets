@@ -6,14 +6,20 @@ Using Tabbar  snippet, you are able to create a iphone like tabbarview that able
 ##How to use
 
 1) place the code into the panel from tabBar.css and tabbar.js
+
 2) place to edit
 
-	-**__Tab__**
-			add .append("<li><a data-first-page='#__pageid__' data-tab='__tabname__'>__tabname_shown__></a></li>") below 
-				- __pageid__ must be replae with the page id of the first page of the tab. You can find pageid from inspect element the div with data-role = "page" and paste in the id
+to add a tab
 
-				- __tabname__ must be replace with the name withoutspace
-				- __tabname_shown__ must be replace with the name want to show in tabbar
+    .append("<li><a 
+        data-first-page='#__pageid__' 
+        data-tab='__tabname__'>
+            __tabname_shown__
+        </a></li>")
+
+- **___pageid___** must be replae with the page id of the first page of the tab. You can find pageid from inspect element the div with data-role = "page" and paste in the id
+- **__tabname__** must be replace with the name withoutspace
+- **__tabname_shown__** must be replace with the name want to show in tabbar
 
 ## Code Snippet
 ```var Tab={};
