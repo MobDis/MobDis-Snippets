@@ -9,7 +9,7 @@ Using Tabbar and NavBar snippet, you are able to create a iphone like tabbarview
 
 2) place to edit
 
-to add a tab
+to add a tab after `.find("div[data-role=navbar] ul")`
 
     .append("<li><a 
         data-first-page='#__pageid__' 
