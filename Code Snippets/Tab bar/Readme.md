@@ -22,6 +22,7 @@ to add a tab
 - **__tabname_shown__** must be replace with the name want to show in tabbar
 
 ## Code Snippet
+
 ```var Tab={};
 Tab.last;
 Tab.history={};
