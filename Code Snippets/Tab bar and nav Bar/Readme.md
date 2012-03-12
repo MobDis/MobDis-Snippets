@@ -15,6 +15,7 @@ Using Tabbar and NavBar snippet, you are able to create a combination of both Ta
 - **__tabname__** An identifier name without any space between words 
 - **__tabname_shown__** A name representation of the Tab
 
+```
     //This section of the snippet will create the Nav Bar and the Tab Bar.
     $("div[data-role=page]").each(function(i,e){
         var $e = $(e);
@@ -33,7 +34,7 @@ Using Tabbar and NavBar snippet, you are able to create a combination of both Ta
                 .append("<li><a data-first-page='#green1' data-tab='green'>Green</a></li>")
                 .append("<li><a data-first-page='#red1' data-tab='red'>Red</a></li>")
     });
-
+```
 ## Code Snippet
 
 
