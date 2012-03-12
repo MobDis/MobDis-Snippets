@@ -1,13 +1,13 @@
 #Tabbar and NavBar
 
-Using Tabbar and NavBar snippet, you are able to create a combination of both Tab Bar and Nav Bar on the same page.
+Using Tabbar and NavBar snippet, you are able to insert a combination of both Tab Bar and Nav Bar on the same page.
 
 
 ##How to use
 
 1) Place <b>tabNavBar.css</b> in custom CSS panel and <b>tabNavbar.js</b> in custom JS Panel
 
-2) Insert and edit the following code to add <b>Tab</b>
+2) Insert and edit the following code in <b>tabNavbar.js</b> to add <b>Tab</b>
 
     .append("<li><a data-first-page='#__pageid__' data-tab='__tabname__'>__tabname_shown__></a></li>") 
 
@@ -35,7 +35,7 @@ Using Tabbar and NavBar snippet, you are able to create a combination of both Ta
                 .append("<li><a data-first-page='#red1' data-tab='red'>Red</a></li>")
     });
 ```
-## Code Snippet
+## tabNavbar.js
 
 
     var Tab={};
@@ -140,11 +140,5 @@ Using Tabbar and NavBar snippet, you are able to create a combination of both Ta
     		});
     		
     });
-
-
-
-css
-
-    .page-footer{
-    	z-index:16777271;
-    }
+##Things to note
+This snippet will allow you to create both tab bar and nav bar on the same page. If you only want to have either a tab bar or nav bar , please see other snippets.

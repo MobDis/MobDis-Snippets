@@ -24,7 +24,7 @@ var yql = "http://query.yahooapis.com/v1/public/yql?q=",
 		ele = $(pageID + ' ' + nodeID +'_content div');
 ```
 
-## Code Snippet
+## YQL.js
 
 
 ```javascript
