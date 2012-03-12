@@ -1,6 +1,6 @@
 #(class)
 
-##Prev_Page 
+##Prev_Page(animation)
 
 Go to previous page of the history with animations.
 
@@ -22,7 +22,7 @@ Go to previous page of the history with animations.
 
  - 5 - Flip
 
-####class method
+####Class method
 
  - start()
 
@@ -43,7 +43,7 @@ Go to previous page of the history with animations.
 
 Go to another page 
 
-####Arguments
+####Arguments( pageNameNId , animation )
 
 + page name and id (string)
 
@@ -73,7 +73,7 @@ Go to another page
 
  - 5 - Flip
 
-####class method
+####Class method
 
  - start()
 
@@ -84,3 +84,24 @@ Go to another page
     b= new Show_Page("red3|18",0)
     b.start()
 
+
+##Loopback(event, target)
+to repeat all the animations
+
+####Arguments
+- event (string)  
+event of the loopbak
+
+- target (string)  
+target of the loopbak
+
+####Class method
+
+ - start()
+
+    start the loopback.
+
+####example code
+
+    a = new LoopBack("pageload", "page-id");
+    a.start();
