@@ -1,27 +1,41 @@
 #Tabbar and NavBar
 
-Using Tabbar and NavBar snippet, you are able to create a iphone like tabbarview and Navigationcontroller that able to switch between tab and go back to history within the tab.
+Using Tabbar and NavBar snippet, you are able to insert a combination of both Tab Bar and Nav Bar on the same page.
 
 
 ##How to use
 
-1) place the code into the panel from tabNavBar.css and tabNavbar.js
+1) Place <b>tabNavBar.css</b> in custom CSS panel and <b>tabNavbar.js</b> in custom JS Panel
 
-2) place to edit
+2) Insert and edit the following code in <b>tabNavbar.js</b> to add <b>Tab</b>
 
-to add a tab after `.find("div[data-role=navbar] ul")`
+    .append("<li><a data-first-page='#__pageid__' data-tab='__tabname__'>__tabname_shown__></a></li>") 
 
-    .append("<li><a 
-        data-first-page='#__pageid__' 
-        data-tab='__tabname__'>
-            __tabname_shown__
-        </a></li>")
+- **___pageid___** must be replace with the page id of the first tab. You can retrieve the page id by "Inspecting Element" with the web developer console.
+- **__tabname__** An identifier name without any space between words 
+- **__tabname_shown__** A name representation of the Tab
 
-- **___pageid___** must be replae with the page id of the first page of the tab. You can find pageid from inspect element the div with data-role = "page" and paste in the id
-- **__tabname__** must be replace with the name withoutspace
-- **__tabname_shown__** must be replace with the name want to show in tabbar
+```
+    //This section of the snippet will create the Nav Bar and the Tab Bar.
+    $("div[data-role=page]").each(function(i,e){
+        var $e = $(e);
+        $e
+            .prepend('<div data-role="header" data-position="fixed" data-id="header"> <a href="#" class="cus-back-button" data-transition="fade">Back</a> <h1>'+ $e.attr("id") +'</h1> </div> ')
+            .append("<div class='page-footer' data-id='footer' data-role='footer' data-position='fixed' ><div class='tabnavbar' data-role='navbar'><ul></ul></div></div>")
+            .find("div[data-role=navbar] ul")
 
-## Code Snippet
+                /**** 
+                * Insert the code here
+                * .append("<li><a data-first-page='#__pageid__' data-tab='__tabname__'>__tabname_shown__></a></li>") 
+                *
+                *****/
+
+                .append("<li><a data-first-page='#blue1' data-tab='blue'>Blue</a></li>")
+                .append("<li><a data-first-page='#green1' data-tab='green'>Green</a></li>")
+                .append("<li><a data-first-page='#red1' data-tab='red'>Red</a></li>")
+    });
+```
+## tabNavbar.js
 
 
     var Tab={};
@@ -126,11 +140,5 @@ to add a tab after `.find("div[data-role=navbar] ul")`
     		});
     		
     });
-
-
-
-css
-
-    .page-footer{
-    	z-index:16777271;
-    }
+##Things to note
+This snippet will allow you to create both tab bar and nav bar on the same page. If you only want to have either a tab bar or nav bar , please see other snippets.

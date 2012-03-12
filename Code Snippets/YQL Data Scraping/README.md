@@ -3,7 +3,7 @@
 Using Yahoo Query Language (YQL), you are able to scrape data and display them in Mobdis sites through objects like the textbox. 
 
 ##How to use:
-Add a textbox object. Paste the code snippet in the custom code panel.
+Add a textbox object. Paste the entire code snippet in the custom code panel.
 
 Edit the snippet at the following places:
 
@@ -24,7 +24,7 @@ var yql = "http://query.yahooapis.com/v1/public/yql?q=",
 		ele = $(pageID + ' ' + nodeID +'_content div');
 ```
 
-## Code Snippet
+## YQL.js
 
 
 ```javascript
