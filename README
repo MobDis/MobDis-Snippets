@@ -2,26 +2,24 @@ http://mobdis.com
 
 MobDis is a mobile site builder based on jQueryMobile. Targeted at designers, it boast a highly visual interface for to quickly and easily layout mobile sites. However some sites might need extra customisation that MobDis does not provide. Thus MobDis provides a Developer Console which (JavaScript, CSS, HTML Object) allows developers to customize any part of a MobDis site to build dynamic sites/web applications
 
-<h2>Why you need the code here</h2>
+##Why you need the code here
 
 This is a collection of JavaScript/CSS code that a developer can place into the MobDis HTML Object or Developer console to build dynamic web applications.
 
-<h2>Overview of Developer Console</h2>
+## Overview of Developer Console
 
-<h3>HTML Object</h3>
-<h3>Developer Console - JavaScript</h3>
-<h3>Developer Console - CSS</h3>
+### HTML Object
+### Developer Console - JavaScript
+### Developer Console - CSS
 
-<h2>2 main types of code</h2>
+## 2 main types of code
 
 The code is divided into 2 main sections. 
 The first is the "Custom Snippets" which are self contained code that provide a specific functionality that MobDis does not provide.
 The second is the  "Object API" which document the Objects that are provided in MobDis. Typically these would list the events and methods to receive callbacks and affect properties of an objects.
 
+## Demos
 
+### Custom Snippets
 
-<h2>Demos</h2>
-
-<h3>Custom Snippets</h3>
-
-<h3>Object API</h3>
+### Object API
