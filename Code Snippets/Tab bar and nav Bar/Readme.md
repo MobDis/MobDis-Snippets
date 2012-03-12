@@ -1,21 +1,31 @@
 #Tabbar and NavBar
 
-Using Tabbar and NavBar snippet, you are able to create a iphone like tabbarview and Navigationcontroller that able to switch between tab and go back to history within the tab.
+Using Tabbar and NavBar snippet, you are able to create a combination of both Tab bar and Nav bar on the same page.
 
 
 ##How to use
 
-1) place the code into the panel from tabNavBar.css and tabNavbar.js
+1) Place tabNavBar.css in custom CSS panel and tabNavbar.js in custom JS Panel
 
-2) place to edit
+2) Edit the code snippets at the following place to add <b>Tabs</b>
 
 to add a tab after `.find("div[data-role=navbar] ul")`
 
-    .append("<li><a 
-        data-first-page='#__pageid__' 
-        data-tab='__tabname__'>
-            __tabname_shown__
-        </a></li>")
+    //create the header and footer , replace or add the append <li>
+    $("div[data-role=page]").each(function(i,e){
+        var $e = $(e);
+        $e
+            .prepend('<div data-role="header" data-position="fixed" data-id="header"> <a href="#" class="cus-back-button" data-transition="fade">Back</a> <h1>'+ $e.attr("id") +'</h1> </div> ')
+            .append("<div class='page-footer' data-id='footer' data-role='footer' data-position='fixed' ><div class='tabnavbar' data-role='navbar'><ul></ul></div></div>")
+            .find("div[data-role=navbar] ul")
+                /**__Tab__**
+                add 
+                .append("<li><a data-first-page='#__pageid__' data-tab='__tabname__'>__tabname_shown__></a></li>") 
+                below*/
+                .append("<li><a data-first-page='#blue1' data-tab='blue'>Blue</a></li>")
+                .append("<li><a data-first-page='#green1' data-tab='green'>Green</a></li>")
+                .append("<li><a data-first-page='#red1' data-tab='red'>Red</a></li>")
+    });
 
 - **___pageid___** must be replae with the page id of the first page of the tab. You can find pageid from inspect element the div with data-role = "page" and paste in the id
 - **__tabname__** must be replace with the name withoutspace
