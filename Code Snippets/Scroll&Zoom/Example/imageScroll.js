@@ -17,6 +17,11 @@ var lastX,lastY;
 var imgDiv = "#"+divName;
 var scrollSelector = "[data-scroll='"+scrollDir+"']";
 var parentDiv;
+
+ $(document).ready(function(){
+	loadStuff();
+ });
+ 
  
  function loadStuff(){
  	

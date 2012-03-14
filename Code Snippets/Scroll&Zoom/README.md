@@ -4,22 +4,34 @@ Use this code snippet to include an image which can scroll and zoom if it is lar
 
 ##How to use:
 
-###Include the following script tags in your <head> tag:
+###Include the following function at the top of your code snippet depending on your mobdis app version.
 
 ####MobDis v2.6:
 
 ```javascript
-<script type="text/javascript" src="jQMBuilder.js"></script>
-<script type="text/javascript" src="jquery-easing.js"></script>
-<script type="text/javascript" src="uscrollview.js"></script>
-<script type="text/javascript" src="vscrollview.js"></script>
-<script type="text/javascript" src="imageScroll.js"></script>
+ $(document).ready(function(){
+	$.getScript('jQMBuilder.js',function(){
+		$.getScript('jquery-easing.js',function(){
+			$.getScript('uscrollview.js',function(){
+				$.getScript('vscrollview.js',function(){
+					$.getScript('jgestures.min.js',function(){
+						loadStuff();
+					});
+				});
+			});
+		});
+	});
+ });
 ```
 
 ####MobDis v3.0 onwards:
 
 ```javascript
-<script type="text/javascript" src="imageScroll.js"></script>
+ $(document).ready(function(){
+					$.getScript('jgestures.min.js',function(){
+						loadStuff();
+					});
+	 });
 ```
 
 
@@ -67,7 +79,7 @@ var imgDiv = "#"+divName;
 var scrollSelector = "[data-scroll='"+scrollDir+"']";
 var parentDiv;
 
- $(document).ready(function(){
+function loadStuff(){
  	
 	var page = document.getElementById(divName);
 	parentDiv = page.parentNode;
@@ -212,17 +224,9 @@ var parentDiv;
 					
 				}, 500);
 				
-				
-				
-				jgestures = document.createElement('script');
-				jgestures.id = 'jgestures';
-				jgestures.type = 'text/javascript';
-				jgestures.src = 'jgestures.min.js';
-				setTimeout("$('#scriptImports').append(jgestures);", 1000);
-				
 				setTimeout('loadEventLister();', 2000);
 	
- });
+ }
  
  function loadEventLister(){
 
