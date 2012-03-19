@@ -17,8 +17,10 @@ var lastX,lastY;
 var imgDiv = "#"+divName;
 var scrollSelector = "[data-scroll='"+scrollDir+"']";
 var parentDiv;
-
- $(document).ready(function(){
+ 
+ function loadStuff(){
+ 	
+	
  	
 	var page = document.getElementById(divName);
 	parentDiv = page.parentNode;
@@ -173,7 +175,7 @@ var parentDiv;
 				
 				setTimeout('loadEventLister();', 2000);
 	
- });
+ }
  
  function loadEventLister(){
 
