@@ -6,21 +6,9 @@ Go to previous page of the history with animations.
 
 ####Arguments
 
-+ animation (integer from 0 to 6 required)
++ animation (any string below)
 
- - 0 - Slide Left
-
- - 6 - Slide Right
-
- - 1 - Slide Up
-
- - 2 - Slide Down
-
- - 3 - Pop
-
- - 4 - Fade
-
- - 5 - Flip
+    "slide", "slideright", "slideup", "slidedown", "pop", "fade", "flip"
 
 ####Class method
 
@@ -30,7 +18,7 @@ Go to previous page of the history with animations.
 
 
 
-####example code
+####Example code
 
     a = new Prev_Page(0);//for slide left
     a.start();
@@ -57,21 +45,9 @@ Go to another page
 
 
 
-+ animation (integer from 0 to 6 required)
++ animation (any string below)
 
- - 0 - Slide Left
-
- - 6 - Slide Right
-
- - 1 - Slide Up
-
- - 2 - Slide Down
-
- - 3 - Pop
-
- - 4 - Fade
-
- - 5 - Flip
+    "slide", "slideright", "slideup", "slidedown", "pop", "fade", "flip"
 
 ####Class method
 
@@ -79,7 +55,7 @@ Go to another page
 
     start the previous page animation
 
-####example code
+####Example code
 
     b= new Show_Page("red3|18",0)
     b.start()
@@ -101,7 +77,49 @@ target of the loopbak
 
     start the loopback.
 
-####example code
+####Example code
 
     a = new LoopBack("pageload", "page-id");
     a.start();
+
+#Event
+
+##tap
+
+trigger when a complete touch event
+
+####Example code
+
+    $("#thediv").bind("tap",function(){})
+
+##taphold
+
+trigger when a complete touch event that continue after 1 second
+
+####Example code
+
+    $("#thediv").bind("taphold",function(){})
+
+##swipe
+
+Triggers when a horizontal drag of 30px or more
+
+####Example code
+
+    $("#thediv").bind("swipe",function(){})
+
+##swipeleft
+
+Triggers when a horizontal drag of 30px or more to left
+
+####Example code
+
+    $("#thediv").bind("swipeleft",function(){})
+
+##swiperight
+
+Triggers when a horizontal drag of 30px or more to the right
+
+####Example code
+
+    $("#thediv").bind("swiperight",function(){})
