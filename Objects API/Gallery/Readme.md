@@ -33,6 +33,12 @@ Following are some of the functions which you can declare in your custom javascr
 ###didScroll(scrollObjectId)
 This event is called when the gallery object is scrolled up/down/left/right.  The parameter of the scrollobject is the if of the drsElement div. You can access all child objects of the gallery using this div.
 
+###didClickCell(scrollObjectId, cellId)
+This event is called when a particular cell in the gallery object is clicked by the user.
+
+###didDblClickCell(scrollObjectId, cellId)
+This event is called when a particular cell in the gallery object is double-clicked by the user.
+
 ##Actions
 You can call these functions with the appropriate parameters to perform the corresponding actions. For example, scrollTo(x,y) gives a specific location in space to which the object is expected to scroll to.
 
@@ -45,7 +51,14 @@ This function slightly more specific. It scrolls the gallery to the right by the
 ###scrollLeft(id, byNumOfCells)
 It scrolls the gallery to the left by the given number of cells. The underlying assumption being that the cells are approximately the size of the 'data-scroll' div.
 
+###randomize(scrollObjectId)
+It scrolls the given scrollview to a random image in the scrollView.
 
+###getLayout(scrollObjectId)
+This function returns the current layout of the gallery. It returns 'grid' if the gallery is in the grid view and 'none' if the gallery is in its normal single view layout.
 
+###setNumberOfImages(scrollObjectId,imageNumber)
+This function sets the number of images for the gallery object. If the 'imageNumber' is greater than the current number of images, more cells are added. If it is lower, the images are deleted from the end.
 
-
+###reloadGallery(scrollObjectId)
+This function can be called if for some reason, the scrollView needs to be reloaded. CSS display property changes can sometime freeze the gallery's scrollView. In this case, the gallery can be easily reloaded by calling this function with the galleryObjectId.
