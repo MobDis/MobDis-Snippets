@@ -36,22 +36,25 @@ This event is called when the gallery object is scrolled up/down/left/right.  Th
 ###didClickCell(scrollObjectId, cellId)
 This event is called when a particular cell in the gallery object is clicked by the user.
 
-###didDblClickCell(scrollObjectId, cellId)
-This event is called when a particular cell in the gallery object is double-clicked by the user.
-
 ##Actions
 You can call these functions with the appropriate parameters to perform the corresponding actions. For example, scrollTo(x,y) gives a specific location in space to which the object is expected to scroll to.
 
-###scrollTo (id,x, y)
+###scrollGalleryTo (scrollObjectId,x, y)
 This function can be used to programmatically move the galery by scrolling it to a particular location. x,y are the horizontal and vertical coordinates respectively to which the scrollview will scroll.
 
-###scrollRight(id, byNumOfCells)
+###moveRight(scrollObjectId)
+This function moves the scrollView to the right by one cell.
+
+###moveLeft(scrollObjectId)
+This function moves the scrollView to the left by one cell.
+
+###scrollRight(scrollObjectId, byNumOfCells)
 This function slightly more specific. It scrolls the gallery to the right by the given number of cells. The underlying assumption being that the cells are approximately the size of the 'data-scroll' div.
 
-###scrollLeft(id, byNumOfCells)
+###scrollLeft(scrollObjectId, byNumOfCells)
 It scrolls the gallery to the left by the given number of cells. The underlying assumption being that the cells are approximately the size of the 'data-scroll' div.
 
-###randomize(scrollObjectId)
+###randomizeGallery(scrollObjectId)
 It scrolls the given scrollview to a random image in the scrollView.
 
 ###getLayout(scrollObjectId)

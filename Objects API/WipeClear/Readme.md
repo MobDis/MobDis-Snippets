@@ -21,14 +21,17 @@ for users to wipe it clear.
 ##Events
 Following are some of the functions which you can declare in your custom javascript and use to perform any functions upon the occurence of the event.
 
-###didLoadWipe(wipeClearObjectId)
+###didLoadWipeClear(wipeClearObjectId)
 This function is called when the widget finished loading the image onto the canvas.
 
-###didStartWipe(wipeClearObjectId)
+###didStartWipe(wipeClearObjectId, x, y)
 This function is called when the user starts a wipeClear stroke.
 
-###didStopWipe(wipeClearObjectId)
+###didStopWipe(wipeClearObjectId, x, y)
 This function is called when the user stops a wipeClear stroke.
+
+###isWiping(wipeClearObjectId, x, y)
+This function is called when the user is in the middle of a stroke.
 
 ###didCompleteWipe(wipeClearObjectId)
 This function is called when the entire image has been wiped clear by the user.
