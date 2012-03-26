@@ -45,4 +45,9 @@ This function executes a random stroke in a random direction of the wipeClear ob
 ###drawStroke(wipeClearObjectId, x1,y1,x2,y2)
 This function can be used to programmatically draw a stroke over the wipeClear image from coordinates (x1,y1) to (x2,y2)
 
+###reloadWipeClear(wipeClearObjectId)
+This function can be called if you wish to reload the wipeClear object and wipe it clean another time.
+
+###reloadWipeClearWithImage(wipeClearObjectId, imgSrc)
+This function can be called if you wish to reload the wipeClear object with a different image from that of the original and wipe it clean another time. Please note that you need to endure that the image link is valid in order for this function to succeed.
 
