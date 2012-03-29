@@ -52,3 +52,18 @@ This function is called when 3D model object spins towards the left.
 
 ##Actions
 You can call these functions with the appropriate parameters to perform the corresponding actions. For example, scrollTo(x,y) gives a specific location in space to which the object is expected to scroll to.
+
+###turnRight(threeDModelObjectId)
+This function can be used to turn the 3D model right by a single image.
+
+###turnLeft(threeDModelObjectId)
+This function can be used to turn the 3D model left by a single image.
+
+###spinRight(threeDModelObjectId)
+This function can be used to spin the 3D model right by a some images.
+
+###spinLeft(threeDModelObjectId)
+This function can be used to spin the 3D model left by a some images.
+
+###fullTurn(threeDModelObjectId)
+This function can be used to spin the 3D model by a full turn of all the images.
