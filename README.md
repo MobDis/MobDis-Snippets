@@ -4,6 +4,8 @@ MobDis is a mobile site builder based on jQueryMobile. Targeted at designers, it
 
 ##Why you need the code here
 
+[![Join the chat at https://gitter.im/MobDis/MobDis-Snippets](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/MobDis/MobDis-Snippets?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is a collection of JavaScript/CSS code that a developer can place into the MobDis HTML Object or Developer console to build dynamic web applications.
 
 ## Overview of Developer Console
